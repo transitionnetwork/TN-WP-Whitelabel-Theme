@@ -1,12 +1,10 @@
-[![Build Status](https://travis-ci.org/creativedotdesign/tofino.svg)](https://travis-ci.org/creativedotdesign/tofino) [![devDependency Status](https://david-dm.org/creativedotdesign/tofino/dev-status.svg)](https://david-dm.org/creativedotdesign/tofino#info=devDependencies) [![Deployment status from DeployBot](https://lambdacreatives.deploybot.com/badge/77558060036000/47551.svg)](http://deploybot.com)
 
-<img src="https://raw.githubusercontent.com/creativedotdesign/tofino/master/screenshot.png" alt="Tofino" width="500">
+# TN Whitelabel theme
 
-# Tofino
+A WordPress starter theme for Transition Hubs
 
-A WordPress starter theme for jumpstarting custom theme development.
 
-Developed by [Daniel Hewes](https://github.com/danimalweb), [Jake Gully](https://github.com/mrchimp).
+Developed from work by[Daniel Hewes](https://github.com/danimalweb), [Jake Gully](https://github.com/mrchimp).
 
 Heavily inspired the by awesome WordPress starter theme [Sage](https://github.com/roots/sage) by [Roots](https://github.com/roots) from [Ben Word](https://github.com/retlehs) and [Scott Walkinshaw](https://github.com/swalkinshaw).
 
