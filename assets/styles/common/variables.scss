@@ -1,0 +1,42 @@
+$border-radius: 0;
+
+// Hamburger Icon
+$bar-width: 1.2rem;
+$bar-height: 3px;
+$bar-spacing: 3px;
+$hamburger-bar-color: #373a3c;
+
+$brand-primary: #008c99;
+$brand-secondary: #a1d6af;
+
+// Social colors
+$socialColours:
+  (
+    facebook: #3b5998,
+    twitter: #00aced,
+    google: #dd4b39,
+    linkedin: #007bb6,
+    youtube: #b00,
+    instagram: #517fa4,
+    pinterest: #cb2027,
+    flickr: #ff0084,
+    tumblr: #32506d,
+    forusquare: #0072b1,
+    dribbble: #ea4c89,
+    vine: #00bf8f,
+    vimeo: #08c,
+    soundcloud: #f50,
+    email: $brand-primary
+  );
+
+$white: #fff;
+$black: #000;
+$ink-black: #364142;
+
+$background-light: #effafc;
+$background-neutral: #fafaf5;
+
+$font-body: "Merriweather", sans-serif;
+$font-head: "Lato", sans-serif;
+
+$border-radius: 5px;

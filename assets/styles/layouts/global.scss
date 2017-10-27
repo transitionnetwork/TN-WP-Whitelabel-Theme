@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Merriweather:400,400i,700,700i');
+
+body {
+  color: $ink-black;
+  font-family: $font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-head;
+  font-weight: 900;
+}
+
+a {
+  color: $brand-primary;
+
+  &:hover {
+    color: darken($brand-primary, 5%);
+  }
+}
+
+nav {
+  font-family: $font-head;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin rollover-off {
+  transition: all 0.25s ease-out;
+}
+
+@mixin rollover-on {
+  transition: all 0.1s ease-in;
+}
+
+@mixin bg-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn {
+  font-family: $font-head;
+  font-weight: 700;
+  @include rollover-off;
+
+  &:hover {
+    @include rollover-on;
+  }
+
+  svg {
+    vertical-align: middle;
+    fill: $white;
+    width: 10px;
+    height: 18px;
+    margin-right: 8px;
+    margin-bottom: 3px;
+  }
+}
+
+.btn-primary {
+  background-color: $brand-primary;
+  border: 0;
+
+  &:hover {
+    background-color: darken($brand-primary, 5%);
+  }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 3px solid $brand-primary;
+  color: $brand-primary;
+
+  svg {
+    fill: $brand-primary;
+  }
+
+  &:hover {
+    background-color: $brand-primary;
+    color: $white;
+    border-color: $brand-primary;
+
+    svg {
+      fill: $white;
+    }
+  }
+}
+
+main {
+  margin: 2rem 0;
+}
+
+h1.page-title {
+  margin-bottom: 1.5rem;
+}
+
+//Post Item (move this)
+.post-item {
+  background-color: $background-neutral;
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h3 {
+    font-size: 1.5em;
+
+    a {
+      color: $ink-black;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .sub {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.sub {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-family: $font-head;
+}
+
+//All posts and pages (move this)
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.size-post-lead {
+  margin-bottom: 1.5rem;
+}
+
+//Sidebar (move this)
+.sidebar {
+  .post-item {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.side-item {
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  background-color: $background-light;
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &:nth-of-type(even) {
+    background-color: $background-neutral;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+}
+
+section.home-callouts {
+  background-color: $background-light;
+  padding: 2rem 0;
+
+  .post-item {
+    background-color: $white;
+  }
+}

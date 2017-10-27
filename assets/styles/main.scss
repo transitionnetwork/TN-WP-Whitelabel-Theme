@@ -1,0 +1,14 @@
+@import 'common/variables';
+@import 'common/mixins';
+
+@import 'base/main'; // Tofino base styles
+
+@import 'layouts/global';
+@import 'components/flexible-content';
+@import 'components/leaflet';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/hero';
+
+// Uncomment for  bare bones woocommerce styles
+// @import 'woocommerce/reboot'

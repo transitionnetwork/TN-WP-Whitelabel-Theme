@@ -1,0 +1,205 @@
+.dropdown-menu {
+  margin: 0;
+}
+
+@include media-breakpoint-up(md) {
+  .dropdown:hover {
+    &.nav-item > .nav-link {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    & > .dropdown-menu {
+      display: block;
+      border: 0;
+
+      .dropdown-item {
+        padding: 0;
+
+        .nav-link {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .dropdown-menu {
+    display: block;
+    border: 0;
+    background-color: transparent;
+
+    .dropdown-item {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
+a.navbar-brand {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @include media-breakpoint-down(md) {
+    img {
+      max-width: 300px;
+    }
+  }
+}
+
+ul.social-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 5px;
+
+  li {
+    margin: 0 2px;
+  }
+
+  a {
+    display: block;
+    background-color: $brand-primary;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    border-radius: 18px;
+    @include rollover-off;
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+    color: $white;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
+
+  a:hover {
+    background-color: darken($brand-primary, 10%);
+    @include rollover-on;
+  }
+
+  // a.facebook svg {
+  //   color: map-get($socialColours, facebook);
+  // }
+
+  // a.twitter svg {
+  //   color: map-get($socialColours, twitter);
+  // }
+
+  // a.youtube svg {
+  //   color: map-get($socialColours, youtube);
+  // }
+
+  // a.instagram svg {
+  //   color: map-get($socialColours, instagram);
+  // }
+
+  // a.vimeo svg {
+  //   color: map-get($socialColours, vimeo);
+  // }
+
+  // a.soundcloud svg {
+  //   color: map-get($socialColours, soundcloud);
+  // }
+
+  // a.pinterest svg {
+  //   color: map-get($socialColours, pinterest);
+  // }
+
+  // a.googleplus svg {
+  //   color: map-get($socialColours, google);
+  // }
+
+  // a.email svg {
+  //   color: map-get($socialColours, email);
+  // }
+}
+
+.vert-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .row {
+    margin: 2px 0;
+  }
+}
+
+.row.flex-end {
+  justify-content: flex-end;
+
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.5rem 0 1.5rem;
+  }
+}
+
+nav.navbar {
+  background-color: $background-light;
+}
+
+ul.navbar-nav {
+  justify-content: flex-end;
+  width: 100%;
+
+  li.nav-item {
+    margin: 0 5px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    a.nav-link {
+      background-color: $white;
+      color: $ink-black;
+      border-radius: $border-radius;
+      padding: 0.75rem;
+      text-align: center;
+      @include rollover-off;
+
+      &:hover {
+        background-color: $brand-primary;
+        color: $white;
+        @include rollover-on;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    li.nav-item {
+      margin: 0;
+
+      a.nav-link {
+        background-color: transparent;
+        margin: 0;
+      }
+    }
+  }
+}
+
+a.btn-donate {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+
+@include media-breakpoint-down(md) {
+  ul.social-list {
+    margin: 5px 0 10px;
+  }
+}

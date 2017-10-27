@@ -1,0 +1,123 @@
+.flexible-content {
+  img {
+    max-width: 100%;
+    height: auto;
+
+    &.fullscreen {
+      width: 100%;
+    }
+  }
+
+  .first {
+    font-size: 1.4em;
+  }
+
+  .quote {
+    padding: 1rem;
+    border-left: 10px solid $brand-primary;
+    padding-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    blockquote {
+      font-size: 1.4em;
+    }
+
+    figure {
+      font-size: 1em;
+    }
+  }
+
+  .callout {
+    background-color: $brand-primary;
+    color: $white;
+    padding: 2rem;
+    font-size: 1.4em;
+  }
+
+  .image {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    &.full-screen {
+      clear: both;
+    }
+
+    img {
+      border: 5px solid $brand-secondary;
+    }
+  }
+
+  .faq-title {
+    margin-bottom: 1rem;
+  }
+
+  .faq {
+    margin-bottom: 2rem;
+
+    .card,
+    .card-header {
+      border: 0;
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .card {
+      margin-bottom: 0.5rem;
+      background-color: transparent;
+    }
+
+    .card-header {
+      padding: 0;
+
+      a {
+        padding: 1rem;
+        padding-right: 2.5rem;
+        display: block;
+        background-color: $brand-primary;
+        color: $white;
+        position: relative;
+        overflow: hidden;
+        @include rollover-off;
+
+        svg {
+          fill: $white;
+          width: 25px;
+          height: 15px;
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+          display: block;
+        }
+
+        &.collapsed {
+          background-color: $background-neutral;
+          color: $ink-black;
+
+          svg {
+            transform: rotate(180deg);
+            fill: $ink-black;
+          }
+        }
+
+        &:hover {
+          background-color: $brand-primary;
+          color: $white;
+          text-decoration: none;
+          @include rollover-on;
+
+          svg {
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    .card-block {
+      padding: 1rem;
+      background-color: $background-neutral;
+    }
+  }
+}
