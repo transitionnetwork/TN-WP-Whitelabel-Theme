@@ -1,10 +1,11 @@
 
 # TN Whitelabel theme
 
-A WordPress starter theme for Transition Hubs
+A WordPress theme for official Transition Hubs
 
+Copyright Transition Network.
 
-Developed from work by[Daniel Hewes](https://github.com/danimalweb), [Jake Gully](https://github.com/mrchimp).
+Developed from work by [Daniel Hewes](https://github.com/danimalweb), [Jake Gully](https://github.com/mrchimp).
 
 Heavily inspired the by awesome WordPress starter theme [Sage](https://github.com/roots/sage) by [Roots](https://github.com/roots) from [Ben Word](https://github.com/retlehs) and [Scott Walkinshaw](https://github.com/swalkinshaw).
 
