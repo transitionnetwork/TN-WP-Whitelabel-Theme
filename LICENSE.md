@@ -1,3 +1,23 @@
+License does not expire.
+
+Use is allowed under the following conditions :
+This software can be used by official Transition Hubs, it can be modified and distributed by Transition Hubs to other Transition hubs (Those which have gone through the formal Hub application process) https://transitionnetwork.org/about-the-movement/international-hubs-circle/
+
+Can be distributed in any number of projects
+
+Can be distributed and / or packaged as a code or binary product (sublicensed)
+
+Can modify source-code and distribute modifications (derivative works)
+Attribution to software creator must be made as specified:
+All copies of the software should attribute https://transitionnetwork.org as the author. 
+We'd appreciate a link back to this site from any website running it.
+Parts of the software are provided under separate licenses, as follows:
+The theme contains permissively licensed software from
+
+Mark Benewith https://github.com/lesteak
+
+Mr Chimp https://github.com/mrchimp
+
 Copyright (c) Ben Word and Scott Walkinshaw from Roots/Sage - https://roots.io/
 
 Modifications and new functionality Copyright (c) Daniel Hewes from Lambda Creatives - https://lambdacreatives.com
