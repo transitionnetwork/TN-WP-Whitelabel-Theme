@@ -1,12 +1,17 @@
 .dropdown-menu {
   margin: 0;
+  padding: 0;
+
+  .dropdown-item {
+    padding: 0;
+    font-size: 0.875em;
+  }
 }
 
 @include media-breakpoint-up(md) {
   .dropdown:hover {
     &.nav-item > .nav-link {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+      border-radius: 0;
     }
 
     & > .dropdown-menu {
@@ -17,8 +22,7 @@
         padding: 0;
 
         .nav-link {
-          border-top-left-radius: 0;
-          border-top-right-radius: 0;
+          border-radius: 0;
         }
       }
     }
@@ -48,7 +52,7 @@ a.navbar-brand {
 
   @include media-breakpoint-down(md) {
     img {
-      max-width: 300px;
+      max-width: 150px;
     }
   }
 }
@@ -89,63 +93,6 @@ ul.social-list {
     background-color: darken($brand-primary, 10%);
     @include rollover-on;
   }
-
-  // a.facebook svg {
-  //   color: map-get($socialColours, facebook);
-  // }
-
-  // a.twitter svg {
-  //   color: map-get($socialColours, twitter);
-  // }
-
-  // a.youtube svg {
-  //   color: map-get($socialColours, youtube);
-  // }
-
-  // a.instagram svg {
-  //   color: map-get($socialColours, instagram);
-  // }
-
-  // a.vimeo svg {
-  //   color: map-get($socialColours, vimeo);
-  // }
-
-  // a.soundcloud svg {
-  //   color: map-get($socialColours, soundcloud);
-  // }
-
-  // a.pinterest svg {
-  //   color: map-get($socialColours, pinterest);
-  // }
-
-  // a.googleplus svg {
-  //   color: map-get($socialColours, google);
-  // }
-
-  // a.email svg {
-  //   color: map-get($socialColours, email);
-  // }
-}
-
-.vert-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .row {
-    margin: 2px 0;
-  }
-}
-
-.row.flex-end {
-  justify-content: flex-end;
-
-  @include media-breakpoint-down(md) {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0.5rem 0 1.5rem;
-  }
 }
 
 nav.navbar {
@@ -153,9 +100,6 @@ nav.navbar {
 }
 
 ul.navbar-nav {
-  justify-content: flex-end;
-  width: 100%;
-
   li.nav-item {
     margin: 0 5px;
 
@@ -193,13 +137,26 @@ ul.navbar-nav {
 
 a.btn-donate {
   margin-left: 15px;
-  margin-right: 15px;
   padding: 0.75rem;
   vertical-align: middle;
 }
 
+@include media-breakpoint-up(lg) {
+  .navbar {
+    & > .container {
+      display: block;
+      justify-content: unset;
+      align-items: unset;
+    }
+
+    .navbar-collapse {
+      justify-content: flex-end;
+    }
+  }
+}
+
 @include media-breakpoint-down(md) {
-  ul.social-list {
-    margin: 5px 0 10px;
+  .top-half {
+    margin: 1rem 0;
   }
 }

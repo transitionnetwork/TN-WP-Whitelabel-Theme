@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php $object = get_queried_object();
+if($object->taxonomy == 'harvesting-category') :
+  $term_id = $object->term_id;
+endif; ?>
+
 <div id="map"></div>
 <script>
   var map = L.map("map");
@@ -16,17 +20,34 @@
     <div class="row">
       <div class="col-12 col-sm-12">
         <h1 class="page-title"><?php echo \Tofino\Helpers\title(); ?></h1>
+        <?php $taxonomy = 'harvesting-category'; ?>
+        <?php include(locate_template('templates/category-select.php')); ?>
       </div>
     </div>
 
     <?php
-    $posts = get_posts(array(
-      'posts_per_page'	=> -1,
-      'post_type'			=> 'pilots'
-    ));
+    if($object->taxonomy == 'harvesting-category') :
+      $posts = get_posts(array(
+        'posts_per_page'	=> -1,
+        'post_type'			=> 'harvesting',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'harvesting-category',
+            'field' => 'term_id',
+            'terms' => $term_id
+          )
+        )
+      ));
+    else :
+        $posts = get_posts(array(
+          'posts_per_page'	=> -1,
+          'post_type'			=> 'harvesting'
+        ));
+    endif;
     
     if( $posts ): ?>
       <div class="row">
+      <?php $count = count($posts); ?>
       <?php foreach( $posts as $post ): 
       setup_postdata( $post ); ?>
         <div class="col-12 col-sm-6 col-md-4">
@@ -56,4 +77,3 @@
     <?php endif; ?>
   </div>
 </main>
-<?php get_footer(); ?>

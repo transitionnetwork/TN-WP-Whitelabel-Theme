@@ -15,10 +15,11 @@ use \Tofino\ThemeOptions\Notifications as n; ?>
   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
    crossorigin=""></script>
-
+  <?php if(get_field('primary_colour', 'options')) : ?>
+    <?php get_template_part('templates/custom-css'); ?>
+    <?php endif; ?>
 </head>
 <body <?php body_class(); ?>>
-
 <?php n\notification('top'); ?>
 
 <!--[if lte IE 9]>
@@ -28,16 +29,16 @@ use \Tofino\ThemeOptions\Notifications as n; ?>
 <![endif]-->
 <nav class="navbar navbar-expand-md <?php echo m\menu_headroom(); ?> <?php echo m\menu_sticky(); ?> <?php echo m\menu_position(); ?>">
   <div class="container">
-  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="bar-wrapper">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </span>
-    <span class="sr-only"><?php _e('Toggle Navigation Button', 'tofino'); ?></span>
-  </button>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="bar-wrapper">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </span>
+      <span class="sr-only"><?php _e('Toggle Navigation Button', 'tofino'); ?></span>
+    </button>
     <div class="row">
-      <div class="col-12 col-lg-3 text-center">
+      <div class="col-12 col-lg-3 col-xl-2 text-center">
         <a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr(bloginfo('name')); ?>">
           <?php if (get_field('logo', 'option')) : ?>
             <?php $img = get_field('logo', 'option'); ?>
@@ -47,27 +48,29 @@ use \Tofino\ThemeOptions\Notifications as n; ?>
           <?php endif; ?>
         </a>
       </div>
-      <div class="col-12 col-lg-9 vert-center">
-        <div class="row flex-end">          
-          <?php if( have_rows('social_networks', 'options') ): ?>
-            <ul class="social-list">
-              <?php while ( have_rows('social_networks', 'options') ) : the_row(); ?>
-              <li>
-                <a class="<?php the_sub_field('social_network'); ?>" href="<?php the_sub_field('url'); ?>" target="<?php the_sub_field('target_blank'); ?>">
-                <?php echo svg(get_sub_field('social_network')); ?>
-                </a>
-              </li>
-              <?php endwhile; ?>
-            </ul>
-          <?php endif; ?> 
+      <div class="col-12 col-lg-9 col-xl-10 d-flex flex-column justify-content-lg-around">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center justify-content-lg-end top-half">
+            <?php if( have_rows('social_networks', 'options') ): ?>
+              <ul class="social-list">
+                <?php while ( have_rows('social_networks', 'options') ) : the_row(); ?>
+                <li>
+                  <a class="<?php the_sub_field('social_network'); ?>" href="<?php the_sub_field('url'); ?>" target="<?php the_sub_field('target_blank'); ?>">
+                  <?php echo svg(get_sub_field('social_network')); ?>
+                  </a>
+                </li>
+                <?php endwhile; ?>
+              </ul>
+            <?php endif; ?> 
 
-          <?php if( have_rows('donate', 'options') ) : ?>
-            <?php while ( have_rows('donate', 'options') ) : the_row(); ?>
-              <?php if(get_sub_field('display')) : ?>
-                <a class="btn btn-primary btn-donate" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a>
-              <?php endif; ?>
-            <?php endwhile; ?>
-          <?php endif; ?>
+            <?php if( have_rows('donate', 'options') ) : ?>
+              <?php while ( have_rows('donate', 'options') ) : the_row(); ?>
+                <?php if(get_sub_field('display')) : ?>
+                  <a class="btn btn-primary btn-donate" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a>
+                <?php endif; ?>
+              <?php endwhile; ?>
+            <?php endif; ?>
+          </div>
         </div>
         <div class="row">
           <div class="col-12">

@@ -105,6 +105,7 @@ h1.page-title {
 //Post Item (move this)
 .post-item {
   background-color: $background-neutral;
+  margin-bottom: 1.5rem;
 
   .content {
     padding: 1.5rem;
@@ -137,10 +138,17 @@ h1.page-title {
   }
 }
 
-.sub {
+.sub,
+.date {
   font-size: 0.8em;
   text-transform: uppercase;
   font-family: $font-head;
+}
+
+.date {
+  text-transform: none;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
 }
 
 //All posts and pages (move this)
@@ -150,13 +158,6 @@ h1.page-title {
 
 .size-post-lead {
   margin-bottom: 1.5rem;
-}
-
-//Sidebar (move this)
-.sidebar {
-  .post-item {
-    margin-bottom: 1.5rem;
-  }
 }
 
 .side-item {
@@ -190,4 +191,8 @@ section.home-callouts {
   .post-item {
     background-color: $white;
   }
+}
+
+section.category-select {
+  margin: 1rem 0;
 }

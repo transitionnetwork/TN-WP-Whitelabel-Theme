@@ -6,11 +6,18 @@
   <div class="content">
     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     <?php if($post_type == 'post') : ?>
+      <?php if(get_the_date()) : ?>
+        <div class="date"><?php the_date(); ?></div>
+      <?php endif; ?>
       <div class="sub">in <?php the_category(','); ?></div>
     <?php elseif($post_type == 'events-trainings') : ?>
       <div class="sub">
         <?php echo (get_field('date')) ? get_field('date') : ''; ?>
         <?php echo (get_field('time')) ? '<br/>at '.get_field('time') : ''; ?>
+      </div>
+    <?php elseif($post_type == 'harvesting') : ?>
+      <div class="sub">
+        <?php echo get_the_term_list( $post->ID, 'harvesting-category', 'In ', ', ', '' ); ?> 
       </div>
     <?php endif; ?>
     <?php
@@ -22,6 +29,9 @@
         endif;
       endwhile;
     endif; ?>
+    <?php if($post_type == 'boxes') : ?>
+      <?php the_content(); ?>
+    <?php endif; ?>
     <a href="<?php the_permalink(); ?>">Read More</a>
   </div>
 </div>
