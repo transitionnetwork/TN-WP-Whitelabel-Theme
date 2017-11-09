@@ -38,7 +38,7 @@ use \Tofino\ThemeOptions\Notifications as n; ?>
       <span class="sr-only"><?php _e('Toggle Navigation Button', 'tofino'); ?></span>
     </button>
     <div class="row">
-      <div class="col-12 col-lg-3 col-xl-2 text-center">
+      <div class="col-12 col-lg-3 text-center">
         <a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr(bloginfo('name')); ?>">
           <?php if (get_field('logo', 'option')) : ?>
             <?php $img = get_field('logo', 'option'); ?>
@@ -48,7 +48,7 @@ use \Tofino\ThemeOptions\Notifications as n; ?>
           <?php endif; ?>
         </a>
       </div>
-      <div class="col-12 col-lg-9 col-xl-10 d-flex flex-column justify-content-lg-around">
+      <div class="col-12 col-lg-9 d-flex flex-column justify-content-lg-around">
         <div class="row">
           <div class="col-12 d-flex justify-content-center justify-content-lg-end top-half">
             <?php if( have_rows('social_networks', 'options') ): ?>
