@@ -20,7 +20,7 @@ endif; ?>
     <div class="row">
       <div class="col-12 col-sm-12">
         <h1 class="page-title"><?php echo \Tofino\Helpers\title(); ?></h1>
-        <?php $taxonomy = 'harvesting-category'; ?>
+        <?php $current_taxonomy = 'harvesting-category'; ?>
         <?php include(locate_template('templates/category-select.php')); ?>
       </div>
     </div>

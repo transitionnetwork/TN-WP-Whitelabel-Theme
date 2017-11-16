@@ -155,6 +155,10 @@ a.btn-donate {
   }
 }
 
+.top-half {
+  margin-bottom: 0.5rem;
+}
+
 @include media-breakpoint-down(md) {
   .top-half {
     margin: 1rem 0;
