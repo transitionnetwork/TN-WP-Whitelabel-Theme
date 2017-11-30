@@ -19,6 +19,9 @@ if (get_theme_mod('footer_sticky') === 'enabled') : ?>
         </a>
       </div>
     </div>
+    <div class="text-center">
+      <p><small>Theme by <a href="https://www.transitionnetwork.org" target="_blank">transitionnetwork.org</a></small></p>
+    </div>
   </div>
 </footer>
 
