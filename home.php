@@ -1,4 +1,20 @@
 <?php get_header(); ?>
+
+<?php if(get_field('hero_image', get_option('page_for_posts'))['url']) : ?>
+  <section class="hero" style="background-image: url(<?php echo get_field('hero_image', get_option('page_for_posts'))['url']; ?>">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 col-xl-6">
+          <h1><?php echo get_field('hero_text', get_option('page_for_posts')); ?></h1>
+          <?php if(get_field('hero_button_text', get_option('page_for_posts'))) : ?>
+            <a class="btn btn-lg btn-secondary" href="<?php echo get_field('hero_button_link', get_option('page_for_posts')); ?>"><?php echo svg('arrow-right'); ?><?php echo get_field('hero_button_text', get_option('page_for_posts')); ?></a>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
 <main>
   <div class="container">
     <div class="row">

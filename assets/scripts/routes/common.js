@@ -7,7 +7,7 @@ import svg4everybody from 'svg4everybody';
 // Import Cookies
 import Cookies from 'js-cookie';
 
-import L from 'leaflet';
+//import L from 'leaflet';
 
 // Import stickyfill
 var Stickyfill = require('stickyfill-web-module')();

@@ -14,7 +14,7 @@ set('ssh_multiplexing', true);
 
 // Do not modify anything under this line unless you know what you're doing
 
-serverList('servers.yml');
+inventory('servers.yml');
 
 task('deploy:gulp', function() {
   $do_gulp = askConfirmation('Run Gulp?', false);
@@ -22,7 +22,7 @@ task('deploy:gulp', function() {
 })->desc('Create dist folder');
 
 task('deploy:upload_dist', function() {
-  upload('dist', '{{release_path}}/dist');
+  upload('dist', '{{release_path}}');
 })->desc('Upload dist folder to server');
 
 task('deploy:theme_composer', function() {
