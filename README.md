@@ -13,7 +13,7 @@ Heavily inspired the by awesome WordPress starter theme [Sage](https://github.co
 
 * Download a pre-complied version of latest release: [Download Zip](https://github.com/transitionnetwork/TN-WP-Whitelabel-Theme/releases/download/1.0/TN-WP-Whitelabel-Theme.zip).
 * Install theme into Wordpress 
-* Ensure below plugins are installed
+* Ensure below plugins are installed and active
 * Import [ACF File](https://github.com/transitionnetwork/TN-WP-Whitelabel-Theme/releases/download/1.0/Whitelabel-ACF_Fields.json) into Advanced Custom Fields PRO: Custom Fields -> Tools -> Import Field Groups
 
 ## Plugin Requirements
@@ -26,7 +26,7 @@ Heavily inspired the by awesome WordPress starter theme [Sage](https://github.co
 * [Polylang 2.2.8](https://en-gb.wordpress.org/plugins/polylang/)
 * [Wordfence Security 6.3.22](https://en-gb.wordpress.org/plugins/wordfence/)
 * [Yoast SEO 6.6.1](https://en-gb.wordpress.org/plugins/wordpress-seo/)
-* [Multisite] WordPress MU Domain Mapping 0.5.5.51](https://en-gb.wordpress.org/plugins/wordpress-mu-domain-mapping/)
+* [Multisite] [WordPress MU Domain Mapping 0.5.5.51](https://en-gb.wordpress.org/plugins/wordpress-mu-domain-mapping/)
 
 
 ## Requirements
