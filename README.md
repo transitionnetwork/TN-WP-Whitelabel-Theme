@@ -5,105 +5,32 @@ A WordPress theme for official Transition Hubs
 
 Copyright Transition Network.
 
-Developed from work by [Daniel Hewes](https://github.com/danimalweb), [Jake Gully](https://github.com/mrchimp).
+Developed from work by [Mark Benewith](https://github.com/lesteak), [Daniel Hewes](https://github.com/danimalweb), [Jake Gully](https://github.com/mrchimp).
 
 Heavily inspired the by awesome WordPress starter theme [Sage](https://github.com/roots/sage) by [Roots](https://github.com/roots) from [Ben Word](https://github.com/retlehs) and [Scott Walkinshaw](https://github.com/swalkinshaw).
 
-[Demo](http://tofino.lambdacreatives.com)
+## Installation
+
+* Download a pre-complied version of latest release: [Download Zip](https://github.com/transitionnetwork/TN-WP-Whitelabel-Theme/releases/download/1.0/TN-WP-Whitelabel-Theme.zip).
+* Install theme into Wordpress 
+* Ensure below plugins are installed
+* Import [ACF File](https://github.com/transitionnetwork/TN-WP-Whitelabel-Theme/releases/download/1.0/Whitelabel-ACF_Fields.json) into Advanced Custom Fields PRO: Custom Fields -> Tools -> Import Field Groups
+
+## Plugin Requirements
+* [Advanced Custom Fields PRO 5.6.7](https://www.advancedcustomfields.com/pro/)
+* [Coming Soon Page & Maintenance Mode by SeedProd 5.0.1.7](https://en-gb.wordpress.org/plugins/coming-soon/)	
+* [Contact Form 7 4.9.2](https://en-gb.wordpress.org/plugins/contact-form-7/)
+* [Contact Form Honeypot 1.1.2](https://en-gb.wordpress.org/plugins/contact-form-7-honeypot/)
+* [Intuitive Custom Post Order 3.1.0](https://en-gb.wordpress.org/plugins/intuitive-custom-post-order/)
+* [Lingotek Translation 1.3.4](https://en-gb.wordpress.org/plugins/lingotek-translation/)
+* [Polylang 2.2.8](https://en-gb.wordpress.org/plugins/polylang/)
+* [Wordfence Security 6.3.22](https://en-gb.wordpress.org/plugins/wordfence/)
+* [Yoast SEO 6.6.1](https://en-gb.wordpress.org/plugins/wordpress-seo/)
+* [Multisite] WordPress MU Domain Mapping 0.5.5.51](https://en-gb.wordpress.org/plugins/wordpress-mu-domain-mapping/)
+
 
 ## Requirements
 
 | Prerequisite              | How to check  | How to install                                  |
 | ------------------------- | ------------- | ----------------------------------------------- |
 | PHP >= 5.5.9              | `php -v`      | [php.net](http://php.net/manual/en/install.php) |
-| Node.js >= 6.x.x          | `node -v`     | [nodejs.org](http://nodejs.org/)                |
-| gulp >= 3.9               | `gulp -v`     | `npm install -g gulp`                           |
-| Composer >= 1.0.0	        | `composer -V` | [getcomposer.org](http://getcomposer.org)       |
-
-## Installation
-
-* Download a pre-complied version of the dev branch: [Download Zip](http://tofino.lambdacreatives.com/tofino.zip).
-* Download the latest [tagged release](https://github.com/creativedotdesign/tofino/releases).
-* Clone the git repo and run `bin/setup.sh` (from your dev machine).
-
-Once you have activated the theme, access Theme Options (WP Customizer) update an option and select save to commit the default values to the database.
-
-## Features
-
-* [Bootstrap 4](http://getbootstrap.com/) (Pre-release Alpha 4)
-* Multilingual ready (WPML)
-* Responsive
-* Theme Options via WP Customizer (Native)
-	* Admin login screen logo
-	* Custom Dashboard Widget
-	* Google Analytics
-	* Hotjar Tracking
-	* Social links
-	* Sticky menu
-	* Sticky footer
-	* Left/Center/Right menu positions
-	* Telephone number
-	* Email address
-	* Company number
-	* Footer text
-	* Notification text / EU Cookie notice with top/bottom positions
-	* Contact form with [Google reCAPTCHA](https://www.google.com/recaptcha) and custom email templates
-	* Data Tables for viewing data submitted via the contact form
-	* Maintenance mode
-	* jQuery in footer
-	* Critical CSS (with loadCSS function)
-	* [Theme Tracker](https://github.com/lambdacreatives/tracker)
-* JS ES6 compatible via Babel and Browserify.
-* [DOM-based routing](http://goo.gl/EUTi53) for DOM Ready and Window Ready via advanced router
-* [SCSS](http://sass-lang.com/)
-* [Gulp](http://gulpjs.com/) build script
-	* Includes [eslint](https://github.com/eslint/eslint), [stylelint](https://github.com/stylelint/stylelint), and [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) for keeping source code up to standard. Custom rulesets for adding additional / tweaking rules.
-	* Includes [Google Page Speed Insights](https://github.com/addyosmani/psi), [W3C Validation](https://github.com/addyosmani/psi) and [AccessSniff](https://github.com/yargalot/AccessSniff) via [Ngrok](https://github.com/bubenshchykov/ngrok)
-	* Use `gulp help` for a full task list with descriptions
-* [Composer](https://getcomposer.org/) for PHP package management
-* Custom Nav-walker Bootstrap 4 ready
-* Namespaced functions
-* Auto post type / slug based template routing
-* Shortcodes
-* AjaxForm handler class. Easily handle form validation and processing with Wordpress Ajax. Send submitted data via email and/or save it as post meta. Add your own custom validator / processor via a simple function hook.
-* [Web Font Loader](https://github.com/typekit/webfontloader) load Google, Typekit and custom fonts.
-* Fragment Cache class
-
-## Documentation
-
-Docs are provided by README.md files in each directory.
-
-## Deployment
-
-We use [Deploybot](https://deploybot.com). The deployment VM is issued the following commands:
-
-```
-composer install
-npm install npm -g
-npm install --loglevel error
-gulp --production
-```
-
-The following files and directories are excluded from being uploaded:
-
-```
-assets
-bin
-gulp
-node_modules
-.eslintrc.yml
-.gitattributes
-.gitignore
-.stylelintrc.yml
-.travis.yml
-.npmrc
-.hound.yml
-bitbucket-pipelines.yml
-composer.json
-composer.lock
-gulpfile.js
-package.json
-ruleset.xml
-**/*.md
-yarn.lock
-```
