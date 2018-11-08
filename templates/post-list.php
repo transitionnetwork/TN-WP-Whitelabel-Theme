@@ -9,7 +9,7 @@
       <?php if(get_the_date()) : ?>
         <div class="date"><?php the_date(); ?></div>
       <?php endif; ?>
-      <div class="sub">in <?php the_category(','); ?></div>
+      <div class="sub">in <?php the_category(', '); ?></div>
     <?php elseif($post_type == 'events-trainings') : ?>
       <div class="sub">
         <?php echo (get_field('date')) ? get_field('date') : ''; ?>

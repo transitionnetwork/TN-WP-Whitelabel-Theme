@@ -18,7 +18,7 @@
 <main>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-sm-12">
+      <div class="col-12">
         <h1 class="page-title"><?php echo \Tofino\Helpers\title(); ?></h1>
         <?php get_template_part('templates/category-select'); ?>
       </div>
