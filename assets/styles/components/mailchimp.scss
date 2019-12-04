@@ -10,7 +10,6 @@
 
     input[type="submit"] {
       @extend .btn;
-      @extend .btn-primary;
       
       border-radius: 0;
       display: block;
