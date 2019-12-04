@@ -195,10 +195,12 @@ function click_taxonomy_dropdown($taxonomy) { ?>
 
 
 function display_mailchimp_form() {
-  return get_template_part('/templates/partials/mailchimp-footer');
+  ob_start();
+  get_template_part('/templates/partials/mailchimp-footer');
+  return ob_get_clean();
 }
 
 function register_shortcodes(){
-   add_shortcode('mailchimp-widget', 'display_mailchimp_form');
+  add_shortcode('mailchimp-widget', 'display_mailchimp_form');
 }
 add_action( 'init', 'register_shortcodes');
