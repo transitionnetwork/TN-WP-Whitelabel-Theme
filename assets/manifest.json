@@ -28,7 +28,7 @@
     "styles": "assets/styles/"
   },
   "config": {
-    "devUrl": "http://wlabel.test",
+    "devUrl": "http://wlabel.loc",
     "stagingUrl": "http://tofino.lambdacreatives.com"
   }
 }
