@@ -32,9 +32,11 @@ ul.social-list a {
 .btn-primary,
 input[type="submit"] {
   background-color: <?php echo $primary_colour; ?>;
+  color: white;
 }
 .btn-secondary {
   border-color: <?php echo $primary_colour; ?>;
+  background-color: transparent;
   color: <?php echo $primary_colour; ?>;
 }
 .btn-secondary svg {
