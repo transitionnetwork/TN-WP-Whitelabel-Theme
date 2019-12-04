@@ -29,7 +29,8 @@ ul.navbar-nav li.nav-item a.nav-link:hover {
 ul.social-list a {
   background-color: <?php echo $primary_colour; ?>;
 }
-.btn-primary {
+.btn-primary,
+input[type="submit"] {
   background-color: <?php echo $primary_colour; ?>;
 }
 .btn-secondary {
