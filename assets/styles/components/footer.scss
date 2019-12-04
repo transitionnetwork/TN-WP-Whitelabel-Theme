@@ -17,6 +17,10 @@ footer {
       .wrap {
         display: flex;
         justify-content: flex-end;
+
+        @include media-breakpoint-down(md) {
+          justify-content: center;
+        }
       }
 
       input[type="email"] {
