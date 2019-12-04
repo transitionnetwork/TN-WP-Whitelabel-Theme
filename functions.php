@@ -192,3 +192,13 @@ function click_taxonomy_dropdown($taxonomy) { ?>
 	echo '</select></form>';
 	?>
 <?php }
+
+
+function display_mailchimp_form() {
+  return get_template_part('/templates/partials/mailchimp-footer');
+}
+
+function register_shortcodes(){
+   add_shortcode('mailchimp-widget', 'display_mailchimp_form');
+}
+add_action( 'init', 'register_shortcodes');
