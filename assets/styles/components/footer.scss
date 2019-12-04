@@ -1,4 +1,34 @@
 footer {
   background-color: $background-neutral;
   padding: 1rem 0;
+
+  .navbar-brand img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  #mc_embed_signup {
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    .mc-field-group {
+      .wrap {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      input[type="email"] {
+        padding: 0.22rem 0.5rem;
+      }
+
+      input[type="submit"] {
+        @extend .btn;
+        @extend .btn-primary;
+        
+        border-radius: 0;
+      }
+    }
+  }
 }
