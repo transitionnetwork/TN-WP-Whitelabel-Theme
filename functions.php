@@ -110,6 +110,13 @@ function custom_post_types() {
     'supports' => array('title','thumbnail')
   );
   register_post_type( 'pilots', $args );
+  
+  $args = array(
+    'public' => true,
+    'label'  => 'The Pioneers',
+    'supports' => array('title','thumbnail')
+  );
+  register_post_type( 'pioneers', $args );
 
   $args = array(
     'public' => true,
