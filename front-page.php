@@ -10,14 +10,15 @@
   <?php if( $posts ): ?>
     <section id="home-callouts">
       <div class="container">
-          <div class="row">
-          <?php foreach( $posts as $post ): 
-          setup_postdata( $post ); ?>
-            <div class="col-12 col-sm-6 col-md-4">
-              <?php get_template_part('templates/post-list'); ?>
-            </div>
-          <?php endforeach; ?>
-          <?php wp_reset_postdata(); ?>
+        <h2><?php _e('Recommended'); ?></h2>
+        <div class="row">
+        <?php foreach( $posts as $post ): 
+        setup_postdata( $post ); ?>
+          <div class="col-12 col-sm-6 col-md-4">
+            <?php get_template_part('templates/post-list'); ?>
+          </div>
+        <?php endforeach; ?>
+        <?php wp_reset_postdata(); ?>
       </div>
     </section>
   <?php endif; ?>

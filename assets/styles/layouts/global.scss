@@ -193,7 +193,7 @@ h1.page-title {
 section#home-callouts,
 section#latest-posts {
   background-color: $background-light;
-  padding: 4rem 0;
+  padding: 2rem 0;
 
   h2 {
     margin-bottom: 1rem;
@@ -202,6 +202,10 @@ section#latest-posts {
   .post-item {
     background-color: $white;
   }
+}
+
+section#latest-posts {
+  background-color: $background-neutral;
 }
 
 section.category-select {
