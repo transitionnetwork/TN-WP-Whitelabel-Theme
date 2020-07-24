@@ -103,7 +103,7 @@ img {
 }
 
 main {
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
 
 h1.page-title {
@@ -154,9 +154,7 @@ h1.page-title {
 }
 
 .date {
-  text-transform: none;
   margin-bottom: 0.25rem;
-  font-weight: bold;
 }
 
 //All posts and pages (move this)
@@ -192,9 +190,14 @@ h1.page-title {
   }
 }
 
-section.home-callouts {
+section#home-callouts,
+section#latest-posts {
   background-color: $background-light;
-  padding: 2rem 0;
+  padding: 4rem 0;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
 
   .post-item {
     background-color: $white;

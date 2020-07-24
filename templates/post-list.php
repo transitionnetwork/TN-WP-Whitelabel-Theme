@@ -11,7 +11,7 @@
       <?php endif; ?>
       <div class="sub">in <?php the_category(', '); ?></div>
     <?php elseif($post_type == 'events-trainings') : ?>
-      <div class="sub">
+      <div class="date">
         <?php echo (get_field('date')) ? get_field('date') : ''; ?>
         <?php echo (get_field('time')) ? '<br/>at '.get_field('time') : ''; ?>
       </div>
