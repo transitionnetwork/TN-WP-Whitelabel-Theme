@@ -14,7 +14,7 @@
         <div class="row">
         <?php foreach( $posts as $post ): 
         setup_postdata( $post ); ?>
-          <div class="col-12 col-sm-6 col-md-4">
+          <div class="col-12 col-sm-6 col-md-4 post-preview">
             <?php get_template_part('templates/post-list'); ?>
           </div>
         <?php endforeach; ?>
