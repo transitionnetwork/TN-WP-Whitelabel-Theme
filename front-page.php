@@ -1,6 +1,7 @@
 <?php get_header(); ?>
   <?php get_template_part('templates/hero-area'); ?>
   <?php get_template_part('templates/latest-blogs'); ?>
+  <?php get_template_part('templates/upcoming-events'); ?>
   <div class="container">
     <main>
       <?php get_template_part('templates/flexible-content'); ?>
