@@ -1,7 +1,15 @@
+<?php $front_page_options = get_field('front_page_options', 'option'); ?>
+
 <?php get_header(); ?>
-  <?php get_template_part('templates/hero-area'); ?>
-  <?php get_template_part('templates/latest-blogs'); ?>
-  <?php get_template_part('templates/upcoming-events'); ?>
+  <?php if(!$front_page_options['hide_hero']) { ?>
+    <?php get_template_part('templates/hero-area'); ?>
+  <?php } ?>
+  <?php if(!$front_page_options['hide_blogs']) { ?>
+    <?php get_template_part('templates/latest-blogs'); ?>
+  <?php } ?>
+  <?php if(!$front_page_options['hide_events']) { ?>
+    <?php get_template_part('templates/upcoming-events'); ?>
+  <?php } ?>
   <div class="container">
     <main>
       <?php get_template_part('templates/flexible-content'); ?>

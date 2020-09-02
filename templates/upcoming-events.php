@@ -1,8 +1,14 @@
+<?php if(get_field('front_page_options_number_of_events', 'option')) {
+  $ppp = get_field('front_page_options_number_of_events', 'option');
+} else {
+  $ppp = 3;
+} ?>
+
 <?php
 $date_today = date('Ymd');
 $args = array(
   'post_type' => 'events-trainings',
-  'posts_per_page' => 3,
+  'posts_per_page' => $ppp,
   'meta_query' => array(
     array (
       'key' => 'date',

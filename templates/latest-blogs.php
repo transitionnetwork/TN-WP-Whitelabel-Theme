@@ -1,7 +1,13 @@
+<?php if(get_field('front_page_options_number_of_blogs', 'option')) {
+  $ppp = get_field('front_page_options_number_of_blogs', 'option');
+} else {
+  $ppp = 3;
+} ?>
+
 <?php
 $args = array(
   'post_type' => 'post',
-  'posts_per_page' => 3
+  'posts_per_page' => $ppp
 );
 
 $posts = get_posts($args);
