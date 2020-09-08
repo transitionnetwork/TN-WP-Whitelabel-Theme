@@ -7,7 +7,9 @@ use \Tofino\ThemeOptions\Notifications as n; ?>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="<?php echo get_field('logo', 'option')['url']; ?>"/>
+  <?php if(is_front_page()) { ?>
+    <meta property="og:image" content="<?php echo get_field('logo', 'option')['url']; ?>"/>
+  <?php } ?>
   <?php wp_head(); ?>
 
 
