@@ -211,3 +211,13 @@ function register_shortcodes(){
   add_shortcode('mailchimp-widget', 'display_mailchimp_form');
 }
 add_action( 'init', 'register_shortcodes');
+
+
+function km_add_unfiltered_html_capability_to_editors( $caps, $cap, $user_id ) {
+  if ( 'unfiltered_html' === $cap && user_can( $user_id, 'administrator' ) ) {
+    $caps = array( 'unfiltered_html' );
+  }
+ 
+  return $caps;
+ }
+ add_filter( 'map_meta_cap', 'km_add_unfiltered_html_capability_to_editors', 1, 3 );
