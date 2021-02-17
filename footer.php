@@ -8,8 +8,8 @@ if (get_theme_mod('footer_sticky') === 'enabled') : ?>
 <footer>
   <div class="container">
     <div class="row justify-content-between">
-      <div class="col-12 col-lg-6 text-center text-lg-left">
-        <a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr(bloginfo('name')); ?>">
+      <div class="col-12 col-lg-6 text-center text-lg-left d-flex align-items-center">
+        <a class="footer-logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr(bloginfo('name')); ?>">
           <?php if (get_field('logo', 'option')) : ?>
             <?php $img = get_field('logo', 'option'); ?>
             <img src="<?php echo $img['url']; ?>" title="<?php echo esc_attr(bloginfo('name')); ?>">
@@ -17,6 +17,14 @@ if (get_theme_mod('footer_sticky') === 'enabled') : ?>
             <?php echo bloginfo('name'); ?>
           <?php endif; ?>
         </a>
+        
+        <?php $footer_logos = get_field('footer_logo', 'options'); ?>
+        <?php if($footer_logos) { ?>
+          <?php foreach($footer_logos as $logo) { ?>
+            <?php //var_dump($logo); ?>
+            <a class="footer-logo" href="<?php echo $logo['link']; ?>"><img src="<?php echo $logo['image']['sizes']['medium']; ?>"></a>
+          <?php } ?>
+        <?php } ?>
       </div>
       <div class="col-12 col-lg-6 text-center text-lg-right">
         <?php if(get_field('mailchimp_embed_active', 'option')) { ?>

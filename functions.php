@@ -21,8 +21,6 @@ $theme_config = [
  *
  */
 $tofino_includes = [
-  'src/data-tables/contact-form-data.php',
-  "src/forms/contact-form.php",
   "src/lib/nav-walker.php",
   "src/lib/init.php",
   "src/lib/assets.php",
@@ -45,6 +43,7 @@ $tofino_includes = [
   "src/theme-options/social-networks.php",
   "src/theme-options/theme-tracker.php",
   "src/theme-options/dashboard-widget.php",
+  "src/custom/acf-field-add.php",
 ];
 
 foreach ($tofino_includes as $file) {
