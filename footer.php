@@ -8,7 +8,7 @@ if (get_theme_mod('footer_sticky') === 'enabled') : ?>
 <footer>
   <div class="container">
     <div class="row justify-content-between">
-      <div class="col-12 col-lg-6 text-center text-lg-left d-flex align-items-center">
+      <div class="col-12 col-lg-6 text-center text-lg-left d-flex align-items-center justify-content-center justify-content-lg-start">
         <a class="footer-logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr(bloginfo('name')); ?>">
           <?php if (get_field('logo', 'option')) : ?>
             <?php $img = get_field('logo', 'option'); ?>
@@ -32,7 +32,7 @@ if (get_theme_mod('footer_sticky') === 'enabled') : ?>
         <?php } ?>
       </div>
     </div>
-    <div class="text-center">
+    <div class="text-center pt-3">
       <p><small>Theme by <a href="https://www.transitionnetwork.org" target="_blank">transitionnetwork.org</a></small></p>
     </div>
   </div>
