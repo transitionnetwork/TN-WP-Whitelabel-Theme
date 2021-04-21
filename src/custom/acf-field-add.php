@@ -396,6 +396,13 @@ acf_add_local_field_group(array(
 				'value' => 'pioneers',
 			),
 		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'tutors',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'normal',
@@ -691,6 +698,13 @@ acf_add_local_field_group(array(
 				'param' => 'post_type',
 				'operator' => '==',
 				'value' => 'pioneers',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'tutors',
 			),
 		),
 	),
@@ -1160,7 +1174,7 @@ format example: https://municipalitiesintransition.us4.list-manage.com/subscribe
 					'key' => 'field_602d5459c25ab',
 					'label' => 'Link',
 					'name' => 'link',
-					'type' => 'url',
+					'type' => 'text',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
@@ -1325,6 +1339,13 @@ acf_add_local_field_group(array(
 				'param' => 'post_type',
 				'operator' => '!=',
 				'value' => 'pioneers',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '!=',
+				'value' => 'tutors',
 			),
 		),
 	),

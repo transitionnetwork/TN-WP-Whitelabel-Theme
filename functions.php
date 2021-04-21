@@ -44,6 +44,7 @@ $tofino_includes = [
   "src/theme-options/theme-tracker.php",
   "src/theme-options/dashboard-widget.php",
   "src/custom/acf-field-add.php",
+  "src/custom/register-custom-types.php",
 ];
 
 foreach ($tofino_includes as $file) {
@@ -95,57 +96,7 @@ function missing_dist_error_notice() {
   </div><?php
 }
 
-function custom_post_types() {
-  $args = array(
-    'public' => true,
-    'label'  => 'Harvesting',
-    'supports' => array('title','thumbnail')
-  );
-  register_post_type( 'harvesting', $args );
-  
-  $args = array(
-    'public' => true,
-    'label'  => 'Pilots',
-    'supports' => array('title','thumbnail')
-  );
-  register_post_type( 'pilots', $args );
-  
-  $args = array(
-    'public' => true,
-    'label'  => 'The Pioneers',
-    'supports' => array('title','thumbnail')
-  );
-  register_post_type( 'pioneers', $args );
 
-  $args = array(
-    'public' => true,
-    'label'  => 'Events/Trainings',
-    'supports' => array('title','thumbnail')
-  );
-  register_post_type( 'events-trainings', $args );
-
-  $args = array(
-    'public' => true,
-    'label'  => 'Custom Sidebar Boxes',
-    'supports' => array('title','thumbnail', 'editor')
-  );
-  register_post_type( 'boxes', $args );
-}
-add_action( 'init', 'custom_post_types' );
-
-
-function custom_taxonomies() {
-  register_taxonomy(
-    'harvesting-category',
-    'harvesting',
-    array(
-      'label' => __( 'Harvesting Categories' ),
-      'rewrite' => array( 'slug' => 'harvesting-category' ),
-      'hierarchical' => true,
-    )
-  );
-}
-add_action( 'init', 'custom_taxonomies' );
 
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page('Municipalities Options');
