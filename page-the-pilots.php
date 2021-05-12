@@ -39,9 +39,12 @@
             $lng = get_sub_field('lng');
           endwhile;
         endif; ?>
-        <script>
-          L.marker([<?php echo $lat; ?>, <?php echo $lng; ?>]).addTo(fg).bindPopup('<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>');
-        </script>
+        
+        <?php if($lat && $lng) { ?>
+          <script>
+            L.marker([<?php echo $lat; ?>, <?php echo $lng; ?>]).addTo(fg).bindPopup('<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>');
+          </script>
+        <?php } ?>
       <?php endforeach; ?>
       <script>
         <?php if($count == 1) : ?>
