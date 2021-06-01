@@ -39,7 +39,7 @@
 										</a>
 									</h5>
 								</div>
-								<div id="collapse<?php echo $i; ?>" class="collapse <?php echo ($i ==== 1 || $accordion_open ) ? 'show' : ''; ?>" role="tabpanel" aria-labelledby="heading<?php echo $i; ?>">
+								<div id="collapse<?php echo $i; ?>" class="collapse <?php echo ($i === 1 || $accordion_open ) ? 'show' : ''; ?>" role="tabpanel" aria-labelledby="heading<?php echo $i; ?>">
 									<div class="card-block">
 										<?php the_sub_field('answer'); ?>
 									</div>
