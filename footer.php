@@ -19,9 +19,8 @@ if (get_theme_mod('footer_sticky') === 'enabled') : ?>
         </a>
         
         <?php $footer_logos = get_field('footer_logo', 'options'); ?>
-        <?php if($footer_logos) { ?>
+        <?php if($footer_logos && is_array($footer_logos)) { ?>
           <?php foreach($footer_logos as $logo) { ?>
-            <?php //var_dump($logo); ?>
             <a class="footer-logo" href="<?php echo $logo['link']; ?>"><img src="<?php echo $logo['image']['sizes']['medium']; ?>"></a>
           <?php } ?>
         <?php } ?>
