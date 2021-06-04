@@ -8,6 +8,7 @@ $hamburger-bar-color: #373a3c;
 
 $brand-primary: #008c99;
 $brand-secondary: #a1d6af;
+$primary: $brand-primary;
 
 // Social colors
 $socialColours:
@@ -35,6 +36,8 @@ $ink-black: #364142;
 
 $background-light: #effafc;
 $background-neutral: #fafaf5;
+
+$light: $background-neutral;
 
 $font-body: "Merriweather", sans-serif;
 $font-head: "Lato", sans-serif;

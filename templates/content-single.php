@@ -24,4 +24,8 @@
       <?php get_template_part('templates/flexible-content'); ?>
     </div>
   <?php endif; ?>
+
+  <div class="container mt-3">
+    <?php get_template_part('comments'); ?>
+  </div>
 </main>

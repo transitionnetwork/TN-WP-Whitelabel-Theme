@@ -1,0 +1,18 @@
+.comment-respond {
+  margin-top: 2rem;
+}
+
+form.comment-form {
+  label {
+    display: block;
+  }
+
+  textarea {
+    padding: 1rem;
+  }
+
+  input[type="submit"] {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}
