@@ -10,12 +10,12 @@ endif; ?>
   <div id="map"></div>
   <main>
 <?php else : ?>
-<div class="container">
   <main>
-  <?php if(get_the_post_thumbnail()) : ?>
-    <?php the_post_thumbnail('post-lead'); ?>
-  <?php endif; ?>
-</div>
+  <div class="container text-center">
+    <?php if(get_the_post_thumbnail()) : ?>
+      <?php the_post_thumbnail('post-lead'); ?>
+    <?php endif; ?>
+  </div>
 <?php endif; ?>
   <div class="container">
     <div class="post-header">

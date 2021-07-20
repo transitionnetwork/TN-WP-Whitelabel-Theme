@@ -3,7 +3,7 @@
 <main>
 <?php else : ?>
 <main>
-  <div class="container">
+  <div class="container text-center">
     <?php if(get_the_post_thumbnail()) : ?>
       <?php the_post_thumbnail('post-lead'); ?>
     <?php endif; ?>

@@ -1,7 +1,7 @@
 <main>
-  <div class="container">
+  <div class="container text-center">
     <?php if(get_the_post_thumbnail()) : ?>
-      <?php the_post_thumbnail('post-lead'); ?>
+        <?php the_post_thumbnail('post-lead'); ?>
     <?php endif; ?>
     <div class="post-header">
       <h1><?php echo \Tofino\Helpers\title(); ?></h1>
