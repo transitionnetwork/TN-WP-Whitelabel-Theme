@@ -11,13 +11,15 @@ endif; ?>
   <main>
 <?php else : ?>
   <main>
-  <div class="container text-center">
-    <?php if(get_the_post_thumbnail()) : ?>
-      <?php the_post_thumbnail('post-lead'); ?>
-    <?php endif; ?>
-  </div>
+  <?php if(get_the_post_thumbnail()) : ?>
+    <div id="lead-image">
+      <div class="container">
+        <?php the_post_thumbnail('post-lead'); ?>
+      </div>
+    </div>
+  <?php endif; ?>
 <?php endif; ?>
-  <div class="container">
+  <div class="container text-center">
     <div class="post-header">
       <h1><?php echo \Tofino\Helpers\title(); ?></h1>
     </div>
