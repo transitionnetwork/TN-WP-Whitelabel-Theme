@@ -415,6 +415,13 @@ acf_add_local_field_group(array(
 				'value' => 'pioneers',
 			),
 		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'tutors',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'normal',
