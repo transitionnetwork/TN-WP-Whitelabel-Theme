@@ -100,6 +100,8 @@ nav.navbar {
 }
 
 ul.navbar-nav {
+  align-items: center;
+
   li.nav-item {
     margin: 0 5px;
 
@@ -162,5 +164,38 @@ a.btn-donate {
 @include media-breakpoint-down(md) {
   .top-half {
     margin: 1rem 0;
+  }
+}
+
+.switcher {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  text-align: inherit !important;
+  cursor: inherit !important;
+  overflow: inherit !important;
+  width: inherit !important;
+  line-height: inherit !important;
+  position: relative !important;
+
+  .selected {
+    background: $white !important;
+
+    a {
+      border: inherit !important;
+      color: inherit !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 5px;
+    }
+  }
+
+  .option {
+    position: absolute !important;
+    background-color: $white !important;
+    width: 100% !important;
+    border: 0 !important;
+
+    a {
+      padding: 3px 12px !important;
+    }
   }
 }

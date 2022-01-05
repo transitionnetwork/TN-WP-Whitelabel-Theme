@@ -114,6 +114,7 @@ h1.page-title {
 .post-item {
   background-color: $background-neutral;
   margin-bottom: 1.5rem;
+  width: 100%;
 
   .content {
     padding: 1.5rem;
@@ -238,7 +239,7 @@ section.category-select {
     border: 8px solid $brand-primary;
   }
 
-  &:before {
+  &::before {
     content: '';
     background-color: $background-light;
     width: 100%;

@@ -5,6 +5,8 @@
   // display: block;
   // right: .5rem;
   width: $bar-width * 2;
+  position: absolute;
+  left: 0;
 
   .navbar-light & {
     background-image: none;

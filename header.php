@@ -32,7 +32,7 @@ use \Tofino\ThemeOptions\Notifications as n; ?>
   </div>
 <![endif]-->
 <nav class="navbar navbar-expand-md <?php echo m\menu_headroom(); ?> <?php echo m\menu_sticky(); ?> <?php echo m\menu_position(); ?>">
-  <div class="container">
+  <div class="container justify-content-center align-items-start flex-nowrap position-relative">
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="bar-wrapper">
         <span class="bar"></span>
@@ -43,7 +43,7 @@ use \Tofino\ThemeOptions\Notifications as n; ?>
     </button>
     <div class="row">
       <div class="col-12 col-lg-3 text-center">
-        <a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr(bloginfo('name')); ?>">
+        <a class="navbar-brand mr-0 mr-lg-3" href="<?php echo home_url(); ?>" title="<?php echo esc_attr(bloginfo('name')); ?>">
           <?php if (get_field('logo', 'option')) : ?>
             <?php $img = get_field('logo', 'option'); ?>
             <img src="<?php echo $img['url']; ?>" title="<?php echo esc_attr(bloginfo('name')); ?>">
@@ -53,28 +53,35 @@ use \Tofino\ThemeOptions\Notifications as n; ?>
         </a>
       </div>
       <div class="col-12 col-lg-9 d-flex flex-column justify-content-lg-around">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center justify-content-lg-end top-half">
-            <?php if( have_rows('social_networks', 'options') ): ?>
-              <ul class="social-list">
-                <?php while ( have_rows('social_networks', 'options') ) : the_row(); ?>
-                <li>
-                  <a class="<?php the_sub_field('social_network'); ?>" href="<?php the_sub_field('url'); ?>" target="<?php the_sub_field('target_blank'); ?>">
-                  <?php echo svg(get_sub_field('social_network')); ?>
-                  </a>
-                </li>
-                <?php endwhile; ?>
-              </ul>
-            <?php endif; ?> 
-
-            <?php if( have_rows('donate', 'options') ) : ?>
-              <?php while ( have_rows('donate', 'options') ) : the_row(); ?>
-                <?php if(get_sub_field('display')) : ?>
-                  <a class="btn btn-primary btn-donate" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a>
-                <?php endif; ?>
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-end">
+          <?php if( have_rows('social_networks', 'options') ): ?>
+            <ul class="social-list mb-2">
+              <?php while ( have_rows('social_networks', 'options') ) : the_row(); ?>
+              <li>
+                <a class="<?php the_sub_field('social_network'); ?>" href="<?php the_sub_field('url'); ?>" target="<?php the_sub_field('target_blank'); ?>">
+                <?php echo svg(get_sub_field('social_network')); ?>
+                </a>
+              </li>
               <?php endwhile; ?>
-            <?php endif; ?>
-          </div>
+            </ul>
+          <?php endif; ?> 
+
+          <?php if(is_plugin_active( 'gtranslate/gtranslate.php' )) { ?>
+            <div class="mb-2">
+              <?php echo do_shortcode('[gtranslate]'); ?>
+            </div>
+          <?php } ?>
+
+
+          <?php if( have_rows('donate', 'options') ) : ?>
+            <?php while ( have_rows('donate', 'options') ) : the_row(); ?>
+              <?php if(get_sub_field('display')) : ?>
+                <div class="mb-2">
+                  <a class="btn btn-primary btn-donate" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a>
+                </div>
+              <?php endif; ?>
+            <?php endwhile; ?>
+          <?php endif; ?>
         </div>
         <div class="row">
           <div class="col-12">
