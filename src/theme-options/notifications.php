@@ -24,7 +24,7 @@ function notification_settings($wp_customize) {
   // Notification text
   $wp_customize->add_setting('notification_text', [
     'default'           => '',
-    'sanitize_callback' => 'sanitize_text_field',
+    // 'sanitize_callback' => 'sanitize_text_field',
   ]);
 
   $wp_customize->add_control('notification_text', [
@@ -97,7 +97,7 @@ function notification($position) {
                 <span aria-hidden="true"><?php echo svg('icon-close'); ?></span>
                 <span class="sr-only"><?php _e('Close', 'tofino'); ?></span>
               </button>
-              <p><?php echo nl2br(get_theme_mod('notification_text')); ?></p>
+              <?php echo get_theme_mod('notification_text'); ?>
             </div>
           </div>
         </div>
