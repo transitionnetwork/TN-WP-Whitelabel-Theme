@@ -1,7 +1,7 @@
 License does not expire.
 
 Use is allowed under the following conditions :
-This software can be used by official Transition Hubs, it can be modified and distributed by Transition Hubs to other Transition hubs (Those which have gone through the formal Hub application process) https://transitionnetwork.org/about-the-movement/international-hubs-circle/
+This software can be used by official Transition Hubs or under license from Transition Network, it can be modified and distributed by Transition Hubs to other Transition hubs (Those which have gone through the formal Hub application process) https://transitionnetwork.org/about-the-movement/international-hubs-circle/
 
 Can be distributed in any number of projects
 
