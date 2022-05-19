@@ -75,6 +75,7 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
+	'show_in_rest' => false,
 ));
 
 acf_add_local_field_group(array(
@@ -266,25 +267,6 @@ acf_add_local_field_group(array(
 					'display' => 'row',
 					'sub_fields' => array(
 						array(
-							'key' => 'field_60b6242f82665',
-							'label' => 'Initialise with accordion open?',
-							'name' => 'initialise_open',
-							'type' => 'true_false',
-							'instructions' => '',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'wrapper' => array(
-								'width' => '',
-								'class' => '',
-								'id' => '',
-							),
-							'message' => '',
-							'default_value' => 0,
-							'ui' => 0,
-							'ui_on_text' => '',
-							'ui_off_text' => '',
-						),
-						array(
 							'key' => 'field_59db9a9f15416',
 							'label' => 'Title',
 							'name' => 'title',
@@ -415,13 +397,6 @@ acf_add_local_field_group(array(
 				'value' => 'pioneers',
 			),
 		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'tutors',
-			),
-		),
 	),
 	'menu_order' => 0,
 	'position' => 'normal',
@@ -433,6 +408,7 @@ acf_add_local_field_group(array(
 	),
 	'active' => true,
 	'description' => '',
+	'show_in_rest' => false,
 ));
 
 acf_add_local_field_group(array(
@@ -522,6 +498,45 @@ acf_add_local_field_group(array(
 			'allow_archives' => 1,
 			'multiple' => 0,
 		),
+		array(
+			'key' => 'field_5f4fbb0c6e130',
+			'label' => 'Hero Contain Image',
+			'name' => 'hero_contain_image',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
+			'key' => 'field_5f4fbb1b6e131',
+			'label' => 'Hero Overlay %',
+			'name' => 'hero_overlay',
+			'type' => 'range',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'min' => '',
+			'max' => '',
+			'step' => '',
+			'prepend' => '',
+			'append' => '',
+		),
 	),
 	'location' => array(
 		array(
@@ -547,6 +562,7 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
+	'show_in_rest' => false,
 ));
 
 acf_add_local_field_group(array(
@@ -696,6 +712,7 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
+	'show_in_rest' => false,
 ));
 
 acf_add_local_field_group(array(
@@ -740,6 +757,8 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'default_value' => '#008c99',
+			'enable_opacity' => false,
+			'return_format' => 'string',
 		),
 		array(
 			'key' => 'field_59db91c7e91e6',
@@ -995,6 +1014,182 @@ format example: https://municipalitiesintransition.us4.list-manage.com/subscribe
 				),
 			),
 		),
+		array(
+			'key' => 'field_5f4fb84453d49',
+			'label' => 'Front Page Options',
+			'name' => 'front_page_options',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'layout' => 'block',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5f4fb87753d4a',
+					'label' => 'Hide Hero',
+					'name' => 'hide_hero',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => '',
+					'ui_off_text' => '',
+				),
+				array(
+					'key' => 'field_5f4fb8c253d4c',
+					'label' => 'Hide Blogs',
+					'name' => 'hide_blogs',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => '',
+					'ui_off_text' => '',
+				),
+				array(
+					'key' => 'field_5f4fb87f53d4b',
+					'label' => 'Hide Events',
+					'name' => 'hide_events',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => '',
+					'ui_off_text' => '',
+				),
+				array(
+					'key' => 'field_5f4fb8db53d4d',
+					'label' => 'Number of Blogs',
+					'name' => 'number_of_blogs',
+					'type' => 'text',
+					'instructions' => 'defaults to 3',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5f4fb8e853d4e',
+					'label' => 'Number of Events',
+					'name' => 'number_of_events',
+					'type' => 'text',
+					'instructions' => 'defaults to 3',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+			),
+		),
+		array(
+			'key' => 'field_602d542bc25a8',
+			'label' => 'Footer Logo',
+			'name' => 'footer_logo',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_602d5452c25aa',
+					'label' => 'Image',
+					'name' => 'image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'medium',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_602d5459c25ab',
+					'label' => 'Link',
+					'name' => 'link',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+			),
+		),
 	),
 	'location' => array(
 		array(
@@ -1013,6 +1208,7 @@ format example: https://municipalitiesintransition.us4.list-manage.com/subscribe
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
+	'show_in_rest' => false,
 ));
 
 acf_add_local_field_group(array(
@@ -1066,6 +1262,7 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
+	'show_in_rest' => false,
 ));
 
 acf_add_local_field_group(array(
@@ -1142,13 +1339,6 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'post_type',
 				'operator' => '!=',
-				'value' => 'boxes',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '!=',
 				'value' => 'pioneers',
 			),
 		),
@@ -1161,6 +1351,7 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
+	'show_in_rest' => false,
 ));
 
-endif;
+endif;		
