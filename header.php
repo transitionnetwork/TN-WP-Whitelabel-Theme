@@ -75,7 +75,7 @@ use \Tofino\ThemeOptions\Notifications as n; ?>
 
           <?php if( have_rows('donate', 'options') ) : ?>
             <?php while ( have_rows('donate', 'options') ) : the_row(); ?>
-              <?php if(get_sub_field('display')) : ?>
+              <?php if(get_sub_field('display') === 'yes') : ?>
                 <div class="mb-2">
                   <a class="btn btn-primary btn-donate" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a>
                 </div>
