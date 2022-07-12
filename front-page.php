@@ -9,11 +9,11 @@
       <?php get_template_part('templates/flexible-content'); ?>
     </main>
   </div>
-  <?php if(!$front_page_options['hide_blogs']) { ?>
-    <?php get_template_part('templates/latest-blogs'); ?>
-  <?php } ?>
   <?php if(!$front_page_options['hide_events']) { ?>
     <?php get_template_part('templates/upcoming-events'); ?>
+  <?php } ?>
+  <?php if(!$front_page_options['hide_blogs']) { ?>
+    <?php get_template_part('templates/latest-blogs'); ?>
   <?php } ?>
   <?php $posts = get_field('related_posts'); ?>
   <?php if( $posts ): ?>
