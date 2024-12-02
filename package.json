@@ -79,7 +79,7 @@
     "fg-loadcss": "^1.3.1",
     "har-validator": "^5.1.3",
     "headroom.js": "^0.9.4",
-    "jquery": "3.3.1",
+    "jquery": "3.5.0",
     "js-cookie": "^2.1.3",
     "popper.js": "^1.12.0",
     "stickyfill-web-module": "^1.1.11",
